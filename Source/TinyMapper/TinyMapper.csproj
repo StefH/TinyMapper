@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<RootNamespace>Nelibur.ObjectMapper</RootNamespace>
-		<PackageName>TinyMapper.Signed</PackageName>
+		<PackageId>TinyMapper.Signed</PackageId>
+		<ReleaseNotes>Signed the original TinyMapper with a strong name key.</ReleaseNotes>
 		<TargetFrameworks>net35;net40;netstandard1.3</TargetFrameworks>
 		<ImportLibs>net</ImportLibs>
 		<Configurations>Debug;Release;VS</Configurations>
 		<Authors>Sergey Morenko;Stef Heyenrath</Authors>
 		<Copyright>Copyright © 2024 Stef Heyenrath</Copyright>
 		<Company>Sergey Morenko</Company>
-		<Description>TinyMapper - a tiny and quick object mapper for .Net.</Description>
+		<Description>A signed version TinyMapper - a tiny and quick object mapper for .Net.</Description>
 		<!--<PackageLicenseUrl>https://github.com/TinyMapper/TinyMapper/blob/master/LICENSE</PackageLicenseUrl>-->
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageIconUrl>http://www.gravatar.com/avatar/cfffd78dd57d31992a0052c6786cdc3d</PackageIconUrl>
+		<!--<PackageIconUrl>http://www.gravatar.com/avatar/cfffd78dd57d31992a0052c6786cdc3d</PackageIconUrl>-->
 		<ApplicationIcon>../../icon.ico</ApplicationIcon>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>TinyMapper;Mapper</PackageTags>
