@@ -69,6 +69,6 @@
 
 	<ItemGroup>
 		<InternalsVisibleTo Include="UnitTests, PublicKey=4bde840421ed3b53" />
-		<InternalsVisibleTo Include="DynamicTinyMapper, PublicKey=4bde840421ed3b53" />
+		<!--<InternalsVisibleTo Include="DynamicTinyMapper, PublicKey=4bde840421ed3b53" />-->
 	</ItemGroup>
 </Project>
