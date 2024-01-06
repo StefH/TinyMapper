@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Text;
 
 namespace Nelibur.ObjectMapper.Reflection
 {
     internal class DynamicAssemblyBuilder
     {
+        internal const string PublicKey = "4bde840421ed3b53";
+        internal static readonly byte[] PublicKeyAsBytes = Encoding.ASCII.GetBytes(PublicKey);
         internal const string AssemblyName = "DynamicTinyMapper";
+        internal const string AssemblyNameWithPublicKey = "DynamicTinyMapper, PublicKey=4bde840421ed3b53";
 #if !COREFX
-//        private const string AssemblyNameFileName = AssemblyName + ".dll";
-//        private static AssemblyBuilder _assemblyBuilder;
+        //        private const string AssemblyNameFileName = AssemblyName + ".dll";
+        //        private static AssemblyBuilder _assemblyBuilder;
 #endif
         private static readonly DynamicAssembly _dynamicAssembly = new DynamicAssembly();
 
@@ -26,6 +30,7 @@ namespace Nelibur.ObjectMapper.Reflection
             public DynamicAssembly()
             {
                 var assemblyName = new AssemblyName(AssemblyName);
+                assemblyName.SetPublicKey(PublicKeyAsBytes);
 
 #if COREFX
                 AssemblyBuilder assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
@@ -33,10 +38,10 @@ namespace Nelibur.ObjectMapper.Reflection
 
 #else
                 AssemblyBuilder assemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
-//                        _assemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.RunAndSave);
+                //                        _assemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.RunAndSave);
 
                 _moduleBuilder = assemblyBuilder.DefineDynamicModule(assemblyName.Name);
-//                        _moduleBuilder = _assemblyBuilder.DefineDynamicModule(assemblyName.Name, AssemblyNameFileName, true);
+                //                        _moduleBuilder = _assemblyBuilder.DefineDynamicModule(assemblyName.Name, AssemblyNameFileName, true);
 #endif
 
             }
@@ -49,7 +54,7 @@ namespace Nelibur.ObjectMapper.Reflection
             public void Save()
             {
 #if !COREFX
-//                _assemblyBuilder.Save(AssemblyNameFileName);
+                //                _assemblyBuilder.Save(AssemblyNameFileName);
 #endif
             }
         }

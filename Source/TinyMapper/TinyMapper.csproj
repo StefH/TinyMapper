@@ -20,7 +20,7 @@
 		<RepositoryUrl>https://github.com/StefH/TinyMapper</RepositoryUrl>
 		<PackageProjectUrl>http://tinymapper.net/</PackageProjectUrl>
 		<IncludeSymbols>false</IncludeSymbols>
-		<Version>3.0.3</Version>
+		<Version>3.0.3-preview-01</Version>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>../../key.snk</AssemblyOriginatorKeyFile>
 		<!--<AssemblyVersion>3.0.1.0</AssemblyVersion>-->
@@ -66,10 +66,5 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-	</ItemGroup>
-
-	<ItemGroup>
-		<InternalsVisibleTo Include="UnitTests, PublicKey=4bde840421ed3b53" />
-		<!--<InternalsVisibleTo Include="DynamicTinyMapper, PublicKey=4bde840421ed3b53" />-->
 	</ItemGroup>
 </Project>
