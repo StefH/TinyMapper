@@ -4,9 +4,7 @@
 
 using System;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Nelibur.ObjectMapper.Reflection;
 
 [assembly: AssemblyCulture("")]
 
@@ -19,5 +17,3 @@ using Nelibur.ObjectMapper.Reflection;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
 [assembly: Guid("97c85ab7-2580-4b03-b767-1e79088053d3")]
-[assembly: InternalsVisibleTo("UnitTests")]
-[assembly: InternalsVisibleTo(DynamicAssemblyBuilder.AssemblyName)]
