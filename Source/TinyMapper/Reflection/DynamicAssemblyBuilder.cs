@@ -33,7 +33,7 @@ namespace Nelibur.ObjectMapper.Reflection
             {
                 var assemblyName = new AssemblyName(AssemblyName);
                 assemblyName.SetPublicKey(PublicKeyAsBytes);
-                assemblyName.SetPublicKeyToken(PublicKeyTokenAsBytes);
+                //assemblyName.SetPublicKeyToken(PublicKeyTokenAsBytes);
 
 #if COREFX
                 AssemblyBuilder assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
