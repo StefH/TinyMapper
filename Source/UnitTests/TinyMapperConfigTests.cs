@@ -1,5 +1,6 @@
-﻿#if !COREFX
+﻿#if !NET8_0_OR_GREATER
 using System;
+using System.Threading;
 using Nelibur.ObjectMapper;
 using Xunit;
 
@@ -12,7 +13,7 @@ namespace UnitTests
 
         public TinyMapperConfigTests()
         {
-            var name = string.Concat($"TestDomainFor{typeof(TinyMapperConfigTests).Name}.Nr_", ++index);
+            var name = string.Concat($"TestDomainFor{typeof(TinyMapperConfigTests).Name}.Nr_", Interlocked.Increment(ref index));
 
             TestDomain = AppDomain.CreateDomain(name,
                 AppDomain.CurrentDomain.Evidence, AppDomain.CurrentDomain.SetupInformation);
@@ -27,7 +28,7 @@ namespace UnitTests
         }
 
         [Fact(DisplayName = "Checks if the Name-Matching is used.")]
-        public void CustomeNameMatching_Success()
+        public void CustomNameMatching_Success()
         {
             TestDomain.DoCallBack(() => {
 
@@ -59,7 +60,7 @@ namespace UnitTests
         }
 
         [Fact(DisplayName = "Checks if the Name-Matching is used isolated.")]
-        public void CustomeNameMatching_IsIsolated()
+        public void CustomNameMatching_IsIsolated()
         {
             TestDomain.DoCallBack(() => {
 

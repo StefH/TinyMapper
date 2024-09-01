@@ -10,20 +10,20 @@
 		<TargetFrameworks>$(TargetFrameworks)</TargetFrameworks>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="$(TargetFramework)=='net8'">
+	<!--<PropertyGroup Condition="$(TargetFramework)=='net8'">
 		<DefineConstants>COREFX</DefineConstants>
 		<LibImport>core</LibImport>
-	</PropertyGroup>
+	</PropertyGroup>-->
 
-	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
+	<!--<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
 		<DefineConstants>COREFX</DefineConstants>
 		<ImportLibs>core</ImportLibs>
-	</PropertyGroup>
+	</PropertyGroup>-->
 
 	<ItemGroup>
 		<PackageReference Include="xunit" Version="2.2.0" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(ImportLibs)' == 'core'">

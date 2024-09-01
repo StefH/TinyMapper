@@ -10,9 +10,7 @@
 		<Copyright>Copyright © 2024 Stef Heyenrath</Copyright>
 		<Company>Sergey Morenko</Company>
 		<Description>A signed version from TinyMapper - a tiny and quick object mapper for .Net.</Description>
-		<!--<PackageLicenseUrl>https://github.com/TinyMapper/TinyMapper/blob/master/LICENSE</PackageLicenseUrl>-->
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<!--<PackageIconUrl>http://www.gravatar.com/avatar/cfffd78dd57d31992a0052c6786cdc3d</PackageIconUrl>-->
 		<ApplicationIcon>../../icon.ico</ApplicationIcon>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>TinyMapper;Mapper</PackageTags>
@@ -23,10 +21,6 @@
 		<Version>3.0.3-preview-01</Version>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>../../key.snk</AssemblyOriginatorKeyFile>
-		<!--<AssemblyVersion>3.0.1.0</AssemblyVersion>-->
-		<!--<FileVersion>3.0.1.0</FileVersion>-->
-		<!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
-		<!--<PackageVersion>3.0.3</PackageVersion>-->
 	</PropertyGroup>
 
 	<ItemGroup>
