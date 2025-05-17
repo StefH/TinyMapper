@@ -46,8 +46,8 @@ namespace Nelibur.ObjectMapper.Mappers
 
         protected string GetMapperFullName()
         {
-            string random = Guid.NewGuid().ToString("N");
-            return $"{AssemblyName}.{ScopeName}.Mapper{random}";
+            var random = Guid.NewGuid().ToString("N");
+            return $"{AssemblyName}.{ScopeName}.Mapper{random}, PublicKey={DynamicAssemblyBuilder.PublicKey}";
         }
 
         protected abstract bool IsSupportedCore(TypePair typePair);
