@@ -4,7 +4,7 @@
     <RootNamespace>Nelibur.ObjectMapper</RootNamespace>
     <TargetFrameworks>net35;net40;net48;netstandard1.3;netstandard2.1;net8</TargetFrameworks>
     <ImportLibs>net</ImportLibs>
-    <Configurations>Debug;Release;VS</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <Authors>Sergey Morenko;Stef Heyenrath</Authors>
     <Company>Sergey Morenko</Company>
     <Description>TinyMapper - a tiny and quick object mapper for .NET (Strong Named)</Description>
@@ -15,8 +15,7 @@
     <RepositoryUrl>https://github.com/StefH/TinyMapper</RepositoryUrl>
     <PackageProjectUrl>https://github.com/StefH/TinyMapper</PackageProjectUrl>
     <IncludeSymbols>false</IncludeSymbols>
-    <Version>4.0.0-preview-02</Version>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>4.0.0</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../../TinyMapper.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -25,15 +24,10 @@
     <None Include="../../Site/icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)'=='Release' or '$(Configuration)'=='VS'">
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Optimize>true</Optimize>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'VS'">
-    <TargetFrameworks>$(TargetFrameworks)</TargetFrameworks>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
