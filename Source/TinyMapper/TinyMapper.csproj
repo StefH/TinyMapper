@@ -7,15 +7,15 @@
     <Configurations>Debug;Release;VS</Configurations>
     <Authors>Sergey Morenko;Stef Heyenrath</Authors>
     <Company>Sergey Morenko</Company>
-    <Description>TinyMapper - a tiny and quick object mapper for .Net.</Description>
+    <Description>TinyMapper - a tiny and quick object mapper for .NET (Strong Named)</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <PackageTags>TinyMapper;Mapper</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/StefH/TinyMapper</RepositoryUrl>
     <PackageProjectUrl>https://github.com/StefH/TinyMapper</PackageProjectUrl>
-	<IncludeSymbols>false</IncludeSymbols>
-    <Version>4.0.0-preview-01</Version>
+    <IncludeSymbols>false</IncludeSymbols>
+    <Version>4.0.0-preview-02</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../../TinyMapper.snk</AssemblyOriginatorKeyFile>
@@ -24,7 +24,7 @@
   <ItemGroup>
     <None Include="../../Site/icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
-  
+
   <PropertyGroup Condition="'$(Configuration)'=='Release' or '$(Configuration)'=='VS'">
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -33,7 +33,7 @@
 
   <PropertyGroup Condition="'$(Configuration)' == 'VS'">
     <TargetFrameworks>$(TargetFrameworks)</TargetFrameworks>
-	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
@@ -54,9 +54,9 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(ImportLibs)' == 'core'">
-	<PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
     <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.3.0" />
-	<PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
   </ItemGroup>
