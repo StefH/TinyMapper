@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<TargetFrameworks>net452;net8</TargetFrameworks>
+	<TargetFrameworks>net452;net48;net8</TargetFrameworks>
     <Configurations>Debug;Release;VS</Configurations>
-
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../../TinyMapper.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -18,7 +17,6 @@
 
   <PropertyGroup Condition="$(TargetFramework)=='net8'">
     <DefineConstants>COREFX</DefineConstants>
-    <!--<LibImport>core</LibImport>-->
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
