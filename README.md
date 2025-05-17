@@ -9,11 +9,6 @@ This is a **signed** version from [TinyMapper](https://github.com/TinyMapper/Tin
 
 [![NuGet](https://img.shields.io/nuget/v/TinyMapper.Signed)](https://www.nuget.org/packages/TinyMapper.Signed)
 
-## Performance Comparison
-
-
-![Performance Comparison](https://raw.githubusercontent.com/TinyMapper/TinyMapper/master/Source/Benchmark/DataSource/PrimitiveTypeMapping.jpg)
-
 
 ## Getting Started
 
@@ -52,11 +47,12 @@ var person = new Person
 var personDto = TinyMapper.Map<PersonDto>(person);
 ```
 
-`TinyMapper` supports the following platforms:
+`TinyMapper.Signed` supports the following platforms:
 * .Net 3.5+
 * .NET Standard 1.3
 * .NET Standard 2.1
 * .NET 8
+
 
 ## What to read
 
@@ -64,6 +60,7 @@ var personDto = TinyMapper.Map<PersonDto>(person);
  * [Complex mapping](https://github.com/TinyMapper/TinyMapper/wiki/Complex-mapping)
  * [How to create custom mapping](https://github.com/TinyMapper/TinyMapper/wiki/Custom-mapping)
  
+
 ## Contributors
 A big thanks to all of TinyMapper's contributors:
  

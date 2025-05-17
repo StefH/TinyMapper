@@ -9,7 +9,6 @@
     <Company>Sergey Morenko</Company>
     <Description>TinyMapper - a tiny and quick object mapper for .Net.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <!--<PackageIconUrl>http://www.gravatar.com/avatar/cfffd78dd57d31992a0052c6786cdc3d</PackageIconUrl>-->
     <PackageIcon>icon.png</PackageIcon>
     <PackageTags>TinyMapper;Mapper</PackageTags>
     <RepositoryType>git</RepositoryType>
