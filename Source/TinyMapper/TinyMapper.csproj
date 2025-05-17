@@ -1,42 +1,60 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	<RootNamespace>Nelibur.ObjectMapper</RootNamespace>
-    <TargetFrameworks>net35;net40;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>net35;net40;netstandard1.3;netstandard2.1;net8</TargetFrameworks>
 
     <ImportLibs>net</ImportLibs>
     <Configurations>Debug;Release;VS</Configurations>
-    <Authors>Sergey Morenko</Authors>
+    <Authors>Sergey Morenko;Stef Heyenrath</Authors>
     <Company>Sergey Morenko</Company>
     <Description>TinyMapper - a tiny and quick object mapper for .Net.</Description>
-    <PackageLicenseUrl>https://github.com/TinyMapper/TinyMapper/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageIconUrl>http://www.gravatar.com/avatar/cfffd78dd57d31992a0052c6786cdc3d</PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!--<PackageIconUrl>http://www.gravatar.com/avatar/cfffd78dd57d31992a0052c6786cdc3d</PackageIconUrl>-->
+    <PackageIcon>icon.png</PackageIcon>
     <PackageTags>TinyMapper;Mapper</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/TinyMapper/TinyMapper</RepositoryUrl>
-    <PackageProjectUrl>http://tinymapper.net/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StefH/TinyMapper</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/StefH/TinyMapper</PackageProjectUrl>
 	<IncludeSymbols>false</IncludeSymbols>
-    <Version>3.0.2-beta</Version>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
-    <FileVersion>3.0.1.0</FileVersion>
+    <Version>4.0.0-preview-01</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageVersion>3.0.3</PackageVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>../../TinyMapper.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../Site/icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
   
   <PropertyGroup Condition="'$(Configuration)'=='Release' or '$(Configuration)'=='VS'">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Optimize>true</Optimize>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)' == 'VS'">
     <TargetFrameworks>$(TargetFrameworks)</TargetFrameworks>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
     <DefineConstants>COREFX</DefineConstants>
     <ImportLibs>core</ImportLibs>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <DefineConstants>COREFX</DefineConstants>
+    <!--<ImportLibs>core</ImportLibs>-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8'">
+    <DefineConstants>COREFX</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup Condition="'$(ImportLibs)' == 'net'">
     <Reference Include="System" />
   </ItemGroup>
+
   <ItemGroup Condition="'$(ImportLibs)' == 'core'">
 	<PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
     <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.3.0" />
@@ -44,4 +62,8 @@
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
   </ItemGroup>
+
+  <!--<ItemGroup>
+    <InternalsVisibleTo Include="UnitTests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100d15fcca86c1c96fc30935c05d618660538bd0b69754742c89ac823d097b5b6143fff3718342d3f1df7eb3c68946612a11f163e80a464be115a6884e79c35445c43254dc30441633ddf3ca4c44efe736171ef2d7f36d127d1d82112b02ee717d3b0f881945ecafa949e669c2a4b2bed9692a340c48b623f6de77706284607acd9" />
+  </ItemGroup>-->
 </Project>

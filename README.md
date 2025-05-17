@@ -1,22 +1,23 @@
-TinyMapper - a quick object mapper for .Net
+﻿TinyMapper.Signed - a quick object mapper for .Net
 ======================================================
-[![Nuget downloads](https://img.shields.io/nuget/v/tinymapper.svg)](https://www.nuget.org/packages/TinyMapper/)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/TinyMapper/TinyMapper/blob/master/LICENSE)
-[![GitHub license](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
-## Performance Comparison
+## Info
+This is a **signed** version from [TinyMapper](https://github.com/TinyMapper/TinyMapper).
 
-![Performance Comparison](https://raw.githubusercontent.com/TinyMapper/TinyMapper/master/Source/Benchmark/DataSource/PrimitiveTypeMapping.jpg)
 
 ## Installation
 
-Available on [nuget](https://www.nuget.org/packages/TinyMapper/)
+[![NuGet](https://img.shields.io/nuget/v/TinyMapper.Signed)](https://www.nuget.org/packages/TinyMapper.Signed)
 
-	PM> Install-Package TinyMapper
+## Performance Comparison
+
+
+![Performance Comparison](https://raw.githubusercontent.com/TinyMapper/TinyMapper/master/Source/Benchmark/DataSource/PrimitiveTypeMapping.jpg)
+
 
 ## Getting Started
 
-```csharp
+``` csharp
 TinyMapper.Bind<Person, PersonDto>();
 
 var person = new Person
@@ -31,7 +32,7 @@ var personDto = TinyMapper.Map<PersonDto>(person);
 
 Ignore mapping source members and bind members with different names/types
 
-```csharp
+``` csharp
 TinyMapper.Bind<Person, PersonDto>(config =>
 {
 	config.Ignore(x => x.Id);
@@ -53,9 +54,9 @@ var personDto = TinyMapper.Map<PersonDto>(person);
 
 `TinyMapper` supports the following platforms:
 * .Net 3.5+
-* [.NET Standard 1.3](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
-* .NET Core
-* Mono
+* .NET Standard 1.3
+* .NET Standard 2.1
+* .NET 8
 
 ## What to read
 
@@ -77,3 +78,4 @@ A big thanks to all of TinyMapper's contributors:
  * [teknogecko](https://github.com/teknogecko)
  * [Samtrion](https://github.com/Samtrion)
  * [DerHulk](https://github.com/DerHulk)
+ * [Stef Heyenrath](https://github.com/StefH)
